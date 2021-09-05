@@ -1,0 +1,26 @@
+border{
+    text-align: center;
+}
+.display{
+    height: 70%;
+
+    background-color: aquamarine;
+    margin-left: 15%; 
+    margin-right: 15%;    
+    top:0%;
+   
+}
+.cont{
+    display: flex;
+    flex-direction:row;
+    text-align: center;
+    justify-content: center;
+   
+}
+.cont > span{
+    align-items: center;
+    width: 150px;
+    height: 350px;
+    background-color: bisque;
+    border: black solid 2px;
+}
