@@ -1,19 +1,49 @@
-class CofeMachin{
-    maxWatter = 1800;
-    maxCoffe = 300;
-    watter = 0 ;
-     cofee = 0 ;
+const  maxWatter = 1800;
+const maxCoffe = 300;
+let watter = maxWatter;
+let cofee = maxCoffe; 
+class CofeMachin{    
+    
+  
     // CofeMachin(){
-    //     this.watter = 1800;
-    //     this.cofee = 300;
+    //     this.watter = this.maxWatter;
+    //     this.cofee = this.maxCoffe;
     // }
     espresso(){
-        // watter =40;
-        // cofee =10;
-        alert("Ваш эспрессо готов");
-        console.log(cofee - 10)
-
+        watter -=40;
+        cofee -=10;
+        console.log(`${watter},${cofee}`);
+         
+        
     }
+    doubleEspresso(){
+        this.espresso();
+        this.espresso();
+        
+    }
+    americano(){
+        this.doubleEspresso();
+        watter -=120;
+        console.log(`${watter},${cofee}`);     
+        
+    }
+    fillWatter(){
+        watter = maxWatter;
+        
+    }
+    fillCoffee(){
+        cofee = maxCoffe;
+    }
+
 }
-const coffeMachin = new CofeMachin();
-coffeMachin.espresso();
+ var coffeMachin = new CofeMachin();
+ let iWatter = document.querySelector('.amountOfWatter');
+ let iCoffe = document.querySelector('.amountOfCoffee');
+
+ addEventListener('click',() =>{ //button
+    iWatter.textContent = watter + " ml";
+    iCoffe.textContent = cofee + " gm";
+ });
+ 
+
+

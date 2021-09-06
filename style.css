@@ -2,7 +2,7 @@ border{
     text-align: center;
 }
 .display{
-    height: 70%;
+    height: 50%;
 
     background-color: aquamarine;
     margin-left: 15%; 
@@ -24,3 +24,25 @@ border{
     background-color: bisque;
     border: black solid 2px;
 }
+.btn-cont{
+    display: flex;
+    flex-direction:row;
+    text-align: center;
+    justify-content: center;
+}
+.button {
+    width: 130px;
+    height: 40px;
+    padding-top: 10px;
+    box-sizing: border-box;
+    border: 1px solid white;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    margin: auto
+  }
+  .button:hover {
+    opacity: 0.5;
+  }
+   
