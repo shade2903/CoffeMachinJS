@@ -1,18 +1,18 @@
-const  maxWatter = 1800;
+const  maxWater = 1800;
 const maxCoffe = 300;
-let watter = maxWatter;
-let cofee = maxCoffe; 
-class CofeMachin{    
+let water = maxWater;
+let coffee = maxCoffe; 
+class CoffeMachin{    
     
   
     // CofeMachin(){
-    //     this.watter = this.maxWatter;
-    //     this.cofee = this.maxCoffe;
+    //     this.water = this.maxWatter;
+    //     this.coffee = this.maxCoffe;
     // }
     espresso(){
-        watter -=40;
-        cofee -=10;
-        console.log(`${watter},${cofee}`);
+        water -=40;
+        coffee -=10;
+        console.log(`${water},${coffee}`);
          
         
     }
@@ -23,26 +23,29 @@ class CofeMachin{
     }
     americano(){
         this.doubleEspresso();
-        watter -=120;
-        console.log(`${watter},${cofee}`);     
+        water -=120;
+        console.log(`${water},${coffee}`);     
         
     }
-    fillWatter(){
-        watter = maxWatter;
+    fillWater(){
+        water = maxWater;
         
     }
     fillCoffee(){
-        cofee = maxCoffe;
+        coffee = maxCoffe;
     }
 
 }
- var coffeMachin = new CofeMachin();
- let iWatter = document.querySelector('.amountOfWatter');
+ var coffeMachin = new CoffeMachin();
+ let iWater = document.querySelector('.amountOfWater');
  let iCoffe = document.querySelector('.amountOfCoffee');
+ let dw = document.querySelector('.diagram');
+dw.hight = 300;
 
  addEventListener('click',() =>{ //button
-    iWatter.textContent = watter + " ml";
-    iCoffe.textContent = cofee + " gm";
+    iWater.textContent = water + " ml";
+    iCoffe.textContent = coffee + " g";
+    dw.hight += 100;
  });
  
 
