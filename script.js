@@ -3,9 +3,10 @@ const maxCoffe = 300;
 let water = maxWater;
 let coffee = maxCoffe; 
 class CoffeMachin{    
-    
+    water;
+    coffee;
   
-    // CofeMachin(){
+    // constructor(){
     //     this.water = this.maxWatter;
     //     this.coffee = this.maxCoffe;
     // }
@@ -45,7 +46,7 @@ dw.hight = 300;
  addEventListener('click',() =>{ //button
     iWater.textContent = water + " ml";
     iCoffe.textContent = coffee + " g";
-    dw.hight += 100;
+    dw.style.height += 100;
  });
  
 
