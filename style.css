@@ -62,17 +62,28 @@ border{
    
   }
 
-  .diagram{
+  #diagram1{
     display:block;   
-    width: 100%;
-    height: 120px;       
+    width:  100%;
+    height: 100%;       
     z-index: 10;    
     background-color: #0093E9;
     background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
     margin-bottom: 2px;
     bottom: 0;
-    position: absolute;
+    position: absolute;  
    
+  }
+  #diagram2{
+    display:block;   
+    width: 100%;
+    height: 100%;       
+    z-index: 10;    
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    margin-bottom: 2px;
+    bottom: 0;
+    position: absolute;  
    
   }
    

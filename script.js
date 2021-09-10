@@ -1,19 +1,22 @@
 const  maxWater = 1800;
 const maxCoffe = 300;
-let water = maxWater;
-let coffee = maxCoffe; 
 class CoffeMachin{    
     water;
-    coffee;
-  
-    // constructor(){
-    //     this.water = this.maxWatter;
-    //     this.coffee = this.maxCoffe;
-    // }
+    coffee;  
+    constructor(water,cofee){
+        this.water = water;
+        this.coffee = cofee;
+    }
     espresso(){
-        water -=40;
-        coffee -=10;
-        console.log(`${water},${coffee}`);
+        if(this.water -40 <=0){
+            this.notEnoughWater();
+        }else if(this.coffee - 10 <=0){
+            this.notEnoughCoffee();
+        }else{
+            this.water -=40;
+            this.coffee -=10;
+        }
+             
          
         
     }
@@ -24,29 +27,39 @@ class CoffeMachin{
     }
     americano(){
         this.doubleEspresso();
-        water -=120;
-        console.log(`${water},${coffee}`);     
+        if(this.water - 120 <=0){
+            this.water -=120;
+        }            
         
     }
     fillWater(){
-        water = maxWater;
+        this.water = maxWater;
         
     }
     fillCoffee(){
-        coffee = maxCoffe;
+        this.coffee = maxCoffe;
+    }
+    notEnoughWater(){
+        alert("Не хватает воды! Заполните бак водой.")
+    }
+    notEnoughCoffee(){
+        alert("Не хватает кофе! Заполните кофейный контейнер")
     }
 
 }
- var coffeMachin = new CoffeMachin();
+ var coffeMachin = new CoffeMachin(maxWater,maxCoffe);
  let iWater = document.querySelector('.amountOfWater');
  let iCoffe = document.querySelector('.amountOfCoffee');
- let dw = document.querySelector('.diagram');
-dw.hight = 300;
+ let diagram1 = document.getElementById('diagram1');
+ let diagram2 = document.getElementById('diagram2');
+ 
+
 
  addEventListener('click',() =>{ //button
-    iWater.textContent = water + " ml";
-    iCoffe.textContent = coffee + " g";
-    dw.style.height += 100;
+    iWater.textContent = coffeMachin.water + " ml";
+    iCoffe.textContent = coffeMachin.coffee + " g";
+    diagram1.style.height = coffeMachin.water/maxWater*100 + "%";
+    diagram2.style.height = coffeMachin.coffee/maxCoffe*100 + "%";
  });
  
 
