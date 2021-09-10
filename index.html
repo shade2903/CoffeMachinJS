@@ -5,28 +5,28 @@
     <title>Document</title>
 </head>
 <body>
-    <header class = "display">
+    <header class = "display" id="header" >
         <div class="cont">
             <span class = "water">Water
-                <span class="amountOfWater">empty </span>
-                <div class="button" onclick="coffeMachin.fillWater();">Заполнить водой</div>
+                <span class="amountOfWater">empty </span>                
                 <div class = "contDiagram">
-                    <div id="diagram1">water</div>
+                    <div class ="diagram" id="diagram1"></div>
                 </div>
+                <div class="button" onclick="coffeMachin.fillWater();">Заполнить водой</div>
             </span>
             <span class="coffe">Coffee
-                <span class="amountOfCoffee">empty</span>
-                <div class="button" onclick="coffeMachin.fillCoffee();" >Заполнить Кофе</div>
+                <span class="amountOfCoffee">empty</span>                
                 <div class = "contDiagram">
-                    <div id="diagram2">cofee</div>
+                    <div class ="diagram" id="diagram2"></div>
                 </div>
+                <div class="button" onclick="coffeMachin.fillCoffee();" >Заполнить кофе</div>
             </span>
         </div>
      </br>
      <div class = "btn-cont">
-        <button class = "button" onclick="coffeMachin.americano();">Американо</button>
-        <button class = "button" onclick="coffeMachin.espresso();">Эспрессо</button>
-        <button class = "button" onclick="coffeMachin.doubleEspresso();;">Двойной Эспрессо</button>
+        <span class = "button" onclick="coffeMachin.americano();">Американо</span>
+        <span class = "button" onclick="coffeMachin.espresso();">Эспрессо</span>
+        <span class = "button" onclick="coffeMachin.doubleEspresso();;">Двойной эспрессо</span>
     </div>  
     </header>
     
