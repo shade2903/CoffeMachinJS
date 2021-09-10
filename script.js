@@ -7,44 +7,15 @@ class CoffeMachin{
         this.water = water;
         this.coffee = cofee;
     }
-    espresso(){
-        if(this.water -40 <=0){
+    makingCoffe(water,coffe){
+        if(this.water -water <=0){
             this.notEnoughWater();
-        }else if(this.coffee - 10 <=0){
+        }else if(this.coffee - coffe <=0){
             this.notEnoughCoffee();
         }else{
-            this.water -=40;
-            this.coffee -=10;
+            this.water -=water;
+            this.coffee -=coffe;
         }  
-         
-        
-    }
-    doubleEspresso(){
-        if(this.water -80 <=0){
-            this.notEnoughWater();
-        }else if(this.coffee - 20 <=0){
-            this.notEnoughCoffee();
-        }else{
-            this.water -=80;
-            this.coffee -=20;
-        }    
-        
-    }
-    americano(){
-        if(this.water -200 <=0){
-            this.notEnoughWater();
-        }else if(this.coffee - 20 <=0){
-            this.notEnoughCoffee();
-        }else{
-            this.water -=200;
-            this.coffee -=20;
-        }     
-    }
-    fillWater(){
-        this.water = maxWater;        
-    }
-    fillCoffee(){
-        this.coffee = maxCoffe;
     }
     notEnoughWater(){
         alert("Не хватает воды! Заполните бак водой.")
@@ -52,6 +23,24 @@ class CoffeMachin{
     notEnoughCoffee(){
         alert("Не хватает кофе! Заполните кофейный контейнер.")
     }
+
+    espresso(){
+        this.makingCoffe(40,10);
+                 
+    }
+    doubleEspresso(){
+        this.makingCoffe(80,20);
+    }
+    americano(){
+        this.makingCoffe(200,20);
+    }
+    fillWater(){
+        this.water = maxWater;        
+    }
+    fillCoffee(){
+        this.coffee = maxCoffe;
+    }
+    
 }
  var coffeMachin = new CoffeMachin(maxWater,maxCoffe);
  let iWater = document.querySelector('.amountOfWater');
